@@ -33,14 +33,12 @@ def timestamp_file(filename):
 
     now = datetime.datetime.today()
     (filepart, extensionpart) = os.path.splitext(filename)
-    return '%s-%04d-%02d-%02d_%02d-%02d-%02d%s' % (
+    return '%s-%04d-%02d-%02d_%02d%s' % (
         filepart,
         now.year,
         now.month,
         now.day,
         now.hour,
-        now.minute,
-        now.second,
         extensionpart,
         )
 
