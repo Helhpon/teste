@@ -36,13 +36,12 @@ def timestamp_file(filename):
     if(v_quantidade_de_salvamento_por_hora>60):
         v_quantidade_de_salvamento_por_hora = 60
     (filepart, extensionpart) = os.path.splitext(filename)
-    return '%s-%04d-%02d-%02d - Hora %02d Minuto %02d Salvamento %02d%s' % (
+    return '%s-%04d-%02d-%02d - Hora %02d Salvamento %02d%s' % (
         filepart,
         now.year,
         now.month,
         now.day,
         now.hour,
-        now.minute,
         (now.minute+1)//(60/v_quantidade_de_salvamento_por_hora),
         extensionpart,
         )
