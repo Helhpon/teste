@@ -52,7 +52,7 @@ def timestamp_file(filename):
 
         now.hour,
 
-        (now.minute+1)//(60/v_quantidade_de_salvamento_por_hora),
+        ((now.minute+1)//(60/v_quantidade_de_salvamento_por_hora)),
 
         extensionpart,
 
