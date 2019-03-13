@@ -1,9 +1,15 @@
 {
+
+	//COPIE TODO ESTE CONTEÚDO PARA PREFERENCES; PACKAGE SETTINGS; AUTOMATIC BACKUPS; SETTINGS - USER
+	//CASO ESTA OPÇÃO NÃO EXISTE, TENTE INSTALAR O PLUGIN PACKAGE CONTROL
+
+
     // Don't make changes to this file directly as they can get wiped out when the
     // plugin is updated. Instead transfer what you need to the 'Settings - User' file.
 
     // The directory where we'll keep our backups. If empty, we'll try to put them in
     // My Documents/Sublime Text Backups (Windows) or ~/sublime_backups (Linux/OSX).
+    //Caminho onde será feito o backup, por exemplo "C:/Users/Pontes/Desktop"
     "backup_dir": "",
 
     // Files larger than this many bytes won't be backed up.
@@ -13,7 +19,10 @@
     "backup_on_open_file": false,
 
     // External command to execute when Merge command is used (Ctrl+Alt+Shift+M by default).
-    "backup_merge_command": ""
+    "backup_merge_command": "",
+
+    //quantidade de salvamentos que terá por hora
+    "quantidade_de_salvamento_por_hora": 60 //o valor máximo deverá ser 60, ou seja, um backup por minuto
 
     // For the above, the following tokens will be replaced with their corresponding values:
     //
