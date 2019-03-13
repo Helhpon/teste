@@ -33,28 +33,51 @@ def timestamp_file(filename):
 
     now = datetime.datetime.today()
     v_quantidade_de_salvamento_por_hora = get_settings().get('quantidade_de_salvamento_por_hora', )
+
     if(v_quantidade_de_salvamento_por_hora>60):
+
         v_quantidade_de_salvamento_por_hora = 60
+
     (filepart, extensionpart) = os.path.splitext(filename)
+
     return '%s-%04d-%02d-%02d - Hora %02d Salvamento %02d%s' % (
+
         filepart,
+
         now.year,
+
         now.month,
+
         now.day,
+
         now.hour,
+
         (now.minute+1)//(60/v_quantidade_de_salvamento_por_hora),
+
         extensionpart,
+
         )
 
+
+
     # return '%s-%04d-%02d-%02d_%02d-%02d-%02d%s' % (
+
     #     filepart,
+
     #     now.year,
+
     #     now.month,
+
     #     now.day,
+
     #     now.hour,
+
     #     now.minute,
+
     #     now.second,
+
     #     extensionpart,
+
     #     )
 
 
